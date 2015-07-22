@@ -1,3 +1,130 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// larger screen styles
+@import 'variables';
+
+@media only screen and (min-width: 40em) {
+
+  .top-bar {
+    text-align: center;
+  }
+
+  ul.center-buttons {
+    display: inline-block;
+  }
+
+  .logo {
+    left: 5px;
+    top: -2px;
+    position: absolute;
+  }
+}
+
+// some mobile resets
+
+.logo {
+  max-width: 2rem;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+.menu-icon {
+  padding-top: 1.2rem;
+}
+
+.top-bar.expanded {
+  background: #333333;
+}
+
+.company-logo {
+  text-align: left;
+}
+
+.company-info {
+  text-align: right;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: $primary;
+  margin-bottom: 2rem;
+}
+
+.home-slider {
+  img {
+    max-height: 800px;
+  }
+}
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+// Nav bar
+.menu {
+  background-color: $text-primary;
+  padding: 3rem 3rem;
+  height: auto;
+  margin-bottom: 1.5rem;
+
+  .inline-list {
+    text-align: center;
+
+    li {
+      float: none;
+      display: inline-block;
+    }
+
+    a {
+      color: $primary;
+      padding-bottom: 0.5rem;
+
+      &:hover {
+        color: $tertiary;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .active a {
+      color: $primary;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    height: 5rem;
+
+    .inline-list {
+      float: left;
+      margin: 0 0 0 1.5rem;
+    }
+
+    a:hover {
+      border-bottom: 2px solid $tertiary;
+    }
+  }
+}
+
+.name {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: $primary;
+
+  i {
+    color: $primary;
+    margin-right: 0.5rem;
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    float: left;
+  }
+}
+
+
