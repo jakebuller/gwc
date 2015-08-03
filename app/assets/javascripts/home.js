@@ -5,8 +5,8 @@
 $(document).ready(function () {
     $('.home-slider').slick({
         dots: false,
-        arrows: false,
-        infinite: false,
+        arrows: true,
+        infinite: true,
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: false,

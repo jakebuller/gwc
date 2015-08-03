@@ -4,6 +4,18 @@
 // larger screen styles
 @import 'variables';
 
+body {
+  background: $tertiary;
+}
+
+#parallax-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("painting.jpg");
+  background-position: center top;
+  background-size: cover;
+  min-height: 600px;
+  position: relative;
+}
+
 @media only screen and (min-width: 40em) {
 
   .top-bar {
@@ -46,11 +58,12 @@
 }
 
 .slogan {
+  position: absolute;
+  bottom: 10px;
+  left: 38%;
   text-align: center;
   font-size: 1.5rem;
-  line-height: 1;
-  color: $primary;
-  margin-bottom: 2rem;
+  color: #fff;
 }
 
 .home-slider {
@@ -68,7 +81,14 @@
 
 // Nav bar
 .menu {
-  background-color: $text-primary;
+  z-index: 9999;
+
+  position:fixed;
+  top:0;
+  width:100%;
+  display: block;
+
+  background-color:rgba(0, 0, 0, 0);
   padding: 3rem 3rem;
   height: auto;
   margin-bottom: 1.5rem;
@@ -82,17 +102,14 @@
     }
 
     a {
-      color: $primary;
+      font-size: 1.2em;
+      color: $text-primary;
       padding-bottom: 0.5rem;
 
       &:hover {
-        color: $tertiary;
         transition: all .3s ease-in-out;
+        text-shadow: 2px 2px #000;
       }
-    }
-
-    .active a {
-      color: $primary;
     }
   }
 
@@ -103,10 +120,6 @@
       float: left;
       margin: 0 0 0 1.5rem;
     }
-
-    a:hover {
-      border-bottom: 2px solid $tertiary;
-    }
   }
 }
 
@@ -115,10 +128,10 @@
   font-size: 1.5rem;
   line-height: 1;
   margin: 0 0 1rem 0;
-  color: $primary;
+  color: $text-primary;
 
   i {
-    color: $primary;
+    color: $text-primary;
     margin-right: 0.5rem;
   }
 
@@ -127,4 +140,22 @@
   }
 }
 
+.testimonials {
+  text-align: center;
+  background: $text-primary;
+  display:none;
+}
 
+.slick-slider {
+  margin-bottom: 0 !important;
+}
+
+#footer {
+  border-top: 2px solid $secondary;
+  padding: 15px 0 40px 0;
+  color: $text-primary;
+
+  a {
+    color: $text-primary;
+  }
+}
